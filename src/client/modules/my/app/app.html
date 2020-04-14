@@ -1,0 +1,77 @@
+<template>
+    <div class="m-6 px-6 py-4 border rounded bg-gray-100 shadow">
+        <div class="flex flex-col">
+            <div class="flex flex-col mt-1">
+                <label
+                    for="firstName"
+                    class="text-gray-800 text-sm font-semibold"
+                    >First Name:</label
+                >
+                <input
+                    class="p-1 mt-1 border"
+                    name="firstName"
+                    id="firstName"
+                    value={state.firstName}
+                    placeholder="Enter your first name"
+                    onchange={handleChange}
+                />
+            </div>
+
+            <div class="flex flex-col mt-3">
+                <label for="surname" class="text-gray-800 text-sm font-semibold"
+                    >Surname:</label
+                >
+                <input
+                    class="p-1 mt-1 border"
+                    name="surname"
+                    id="surname"
+                    value={state.surname}
+                    placeholder="Enter your surname"
+                    onchange={handleChange}
+                />
+            </div>
+
+            <div class="flex flex-col mt-3">
+                <label
+                    for="middleName"
+                    class="text-gray-800 text-sm font-semibold"
+                    >Middle Name:</label
+                >
+                <input
+                    class="p-1 mt-1 border"
+                    name="middleName"
+                    id="middleName"
+                    value={state.middleName}
+                    placeholder="Enter your middle name"
+                    onchange={handleChange}
+                />
+            </div>
+
+            <div class="flex flex-col mt-3">
+                <label
+                    for="previousName"
+                    class="text-gray-800 text-sm font-semibold"
+                    >Previous Name:</label
+                >
+                <input
+                    class="p-1 mt-1 border"
+                    name="previousName"
+                    id="previousName"
+                    value={state.previousName}
+                    placeholder="Enter your previous name"
+                    onchange={handleChange}
+                />
+            </div>
+
+            <div class="mt-4">
+                <button
+                    class={buttonClasses}
+                    disabled={invalid}
+                    onclick={handleSave}
+                >
+                    Can Save
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
